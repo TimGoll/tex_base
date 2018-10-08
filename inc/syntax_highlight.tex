@@ -1,0 +1,53 @@
+% !TeX root = ../mainfile.tex
+
+% https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+
+% MATLAB style
+\definecolor{matlab\_keyboardcolor}{RGB}{5,75,175} %darkblue
+\definecolor{matlab\_commentcolor}{RGB}{140,180,155} %darkgreen
+\definecolor{matlab\_backgroundcolor}{RGB}{250,250,250} %lightblue
+\definecolor{matlab\_bordercolor}{RGB}{180,180,180}
+\definecolor{matlab\_numbercolor}{RGB}{100,100,100}
+\lstdefinestyle{matlab-style} {
+	language=matlab, 
+	basicstyle=\ttfamily \small, 
+	keywordstyle=\bfseries \color{matlab\_keyboardcolor}, 
+	identifierstyle=\color{black}, 
+	commentstyle=\color{matlab\_commentcolor}, 
+	stringstyle=\ttfamily, 
+	breaklines=true, 
+	numbers=left, 
+	numberstyle={\tiny \color{matlab\_bordercolor}}, 
+	numbersep=10pt,
+	frame=single,
+	rulecolor=\color{matlab\_bordercolor},
+	backgroundcolor=\color{matlab\_backgroundcolor},
+	captionpos=b,
+	tabsize=4,
+	escapeinside={\%*}{*} %matlab comment symbol
+}
+
+% VERILOG style
+\definecolor{verilog\_keyboardcolor}{RGB}{5,75,175} %darkblue
+\definecolor{verilog\_commentcolor}{RGB}{140,180,155} %darkgreen
+\definecolor{verilog\_backgroundcolor}{RGB}{250,250,250} %lightblue
+\definecolor{verilog\_bordercolor}{RGB}{180,180,180}
+\definecolor{verilog\_numbercolor}{RGB}{100,100,100}
+\lstdefinestyle{verilog-style} {
+	language=Verilog,
+	basicstyle=\ttfamily \small,
+	frame=none,
+	keywordstyle=\bfseries \color{verilog\_keyboardcolor},
+	identifierstyle=\color{black},
+	commentstyle=\itshape \color{verilog\_commentcolor},
+	stringstyle=\ttfamily, 
+	breaklines=true, 
+	numbers=left,
+	numberstyle={\tiny \color{verilog\_numbercolor}},
+	numbersep=10pt,
+	frame=single,
+	rulecolor=\color{verilog\_bordercolor},
+	backgroundcolor=\color{verilog\_backgroundcolor},
+	captionpos=b,    
+	tabsize=4
+}

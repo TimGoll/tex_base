@@ -1,0 +1,28 @@
+% !TeX root = ../mainfile.tex
+
+\section{Code}
+
+Reference to Listing \ref{regarrays_gen}.
+
+\label{regarrays}
+\lstset{style=verilog-style}
+\lstinputlisting[caption=Beispiel einer Portliste mit Register-/Wirearrays]{inc/code/addierzelle_entity_regarray.v}
+
+
+\label{regarrays_gen}
+\lstset{style=verilog-style}
+\lstinputlisting[caption=Beispiel einer Portliste mit Register-/Wirearrays,firstnumber=17]{inc/code/addierzelle_entity_generic.v}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+% From this point on, only show up to \sections in the ToC
+
+\pagebreak
+
+\subsection{Hidden subsection}
+I'm hidden in the ToC! \cite{Albrecht2010}
+
+\subsection*{Hidden subsection without a number}
+I'm hidden too! \cite{Albrecht2010_IEICE}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{5}}
+% From this point on, show everything again

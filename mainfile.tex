@@ -1,0 +1,25 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = de_DE_frami
+
+\input{inc/header.tex}
+\input{inc/syntax_highlight.tex}
+ 
+\begin{document}
+
+% TITLE PAGE
+\input{chapter/title.tex}
+
+% TABLE OF CONTENTS
+\tableofcontents
+\pagebreak
+
+% INCLUDE CHAPTER
+\input{chapter/chapter1.tex} \pagebreak
+\input{chapter/chapter2.tex} \pagebreak
+
+% BIBTEX
+\renewcommand{\bibname}{Literatur- und Quellenverzeichnis} 
+\bibliographystyle{unsrt}
+\bibliography{bibtex}
+
+\end{document}
