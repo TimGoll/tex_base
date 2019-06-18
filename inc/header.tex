@@ -1,6 +1,10 @@
 % !TeX root = ../mainfile.tex
 
-\documentclass[bibliography=totoc,listof=totoc,a4paper]{scrartcl}
+\documentclass[bibliography=totoc,listof=totoc,a4paper]{scrreprt}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{0.75em}
+\setlength{\parskip}{0.5em}
 
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
@@ -9,11 +13,11 @@
 \usepackage[ngerman]{babel}
 \usepackage{amsmath}
 \usepackage{natbib}
-\usepackage{parskip}
 \usepackage{url}
-\usepackage{listings}
 \usepackage{titling}
-\usepackage[table]{xcolor}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{tcolorbox}
 \usepackage{vmargin}
 \usepackage{listings}
 \usepackage{float}
@@ -22,41 +26,16 @@
 \setpapersize{A4}
 \setmarginsrb{2 cm}{1 cm}{2 cm}{1 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 \usepackage[onehalfspacing]{setspace}
-\usepackage{changes}
 \usepackage{tikz}
 \usetikzlibrary{calc,decorations.markings}
 \usepackage[automark]{scrlayer-scrpage} %newer version of scrpage2
 \usepackage[export]{adjustbox} % loads also graphicx
+
 \usepackage[hidelinks]{hyperref}
-
-\pagestyle{scrheadings}
-\clearscrheadfoot
-\ihead[]{\headmark}
-\automark[subsection]{section}
-\ofoot[\pagemark]{\pagemark}
-\setheadsepline{1pt}
-\setfootsepline{1pt}
-\definecolor{scr\_gray}{RGB}{180,180,180}
-\definecolor{scr\_gray\_2}{RGB}{100,100,100}
-\addtokomafont{headsepline}{\color{scr\_gray}}
-\addtokomafont{footsepline}{\color{scr\_gray}}
-\setkomafont{pageheadfoot}{\color{scr\_gray\_2} \bfseries \small} 
-
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{ifthen}
+\usepackage{xparse,xfp}
 
 \clubpenalty = 1000 % reduziert Schusterjungen
 \widowpenalty = 1000 % reduziert Hurenkinder
-
-% some colors
-\definecolor{Gray}{gray}{0.9}
-\definecolor{GrayDark}{gray}{0.7}
-\definecolor{lme1}{RGB}{16,71,29}
-\definecolor{lme2}{RGB}{148,188,151}
-
-\addto\captionsngerman{\renewcommand{\figurename}{Abb.}}
-\addto\captionsngerman{\renewcommand{\tablename}{Tab.}}
-
-% reset counters on new section, use "chngcntr" package
-\counterwithin*{figure}{section}
-\counterwithin*{table}{section}
-\counterwithin*{equation}{section}
-

@@ -1,0 +1,121 @@
+% !TeX root = ../mainfile.tex
+
+% SETUP HEADER AND FOOTER
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ihead[]{\headmark}
+\automark[subsection]{section}
+\ofoot[\pagemark]{\pagemark}
+\setheadsepline{1pt}
+\setfootsepline{1pt}
+
+\addtokomafont{headsepline}{\color{scr-gray}}
+\addtokomafont{footsepline}{\color{scr-gray}}
+\setkomafont{pageheadfoot}{\color{scr-gray-2} \bfseries \small} 
+
+% SETUP URL/CITE
+\hypersetup{colorlinks,linkcolor={black},citecolor={citecolor},urlcolor={urlcolor}}
+
+% SETUP CAPTIONS
+% german titles
+\newcommand{\ngfigure}{Image}
+\newcommand{\ngtable}{Table}
+\newcommand{\nglisting}{Listing}
+\newcommand{\ngsection}{Chapter}
+\addto\captionsngerman{\renewcommand{\figurename}{\ngfigure}}
+\addto\captionsngerman{\renewcommand{\tablename}{\ngtable}}
+\addto\captionsngerman{\renewcommand{\lstlistingname}{\nglisting}}
+
+% reset counters on new section, use "chngcntr" package
+\counterwithin*{figure}{section}
+\counterwithin*{table}{section}
+\counterwithin*{equation}{section}
+
+% design captions
+\captionsetup[lstlisting]{labelfont={it, color=labelnumbercolor},textfont={bf}}
+\captionsetup[figure]{labelfont={it, color=labelnumbercolor},textfont={bf}}
+\captionsetup[subfigure]{labelfont={color=labelnumbercolor},textfont={}}
+% TODO: http://www.peteryu.ca/tutorials/publishing/latex_captions
+
+% REFERENCE STYLING (this has to be an ugly oneliner in order for the command to be space-free)
+\newcommand{\refn}[2][f]{%
+	\ifthenelse{\equal{\detokenize{#1}}{\detokenize{f}}}{%
+			\textbf{\ngfigure}}{}%
+	\ifthenelse{\equal{\detokenize{#1}}{\detokenize{t}}}{%
+		\textbf{\ngtable}}{}%
+	\ifthenelse{\equal{\detokenize{#1}}{\detokenize{l}}}{%
+		\textbf{\nglisting}}{}%
+	\ifthenelse{\equal{\detokenize{#1}}{\detokenize{s}}}{%
+		\textbf{\ngsection}}{}%
+	%
+	\textbf{\textcolor{refnumbercolor}{~\ref{#2}}}%
+}
+
+% IMAGE BOXES
+\newcommand{\imgbox}[4][1]{
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=#1\textwidth]{#2}
+		
+		\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
+		
+		\caption{#4}
+		\label{#3}
+	\end{figure}
+}
+
+\newcommand{\imgboxdesc}[5][1]{
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=#1\textwidth]{#2}
+		
+		%\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
+		\raisebox{-7pt}{\parbox[t]{\textwidth}{
+				\textit{#5\\}
+				\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
+		}}
+
+		\caption{#4}
+		\label{#3}
+	\end{figure}
+}
+
+\newcommand{\doubleimgboxdesc}[9]{
+	\begin{figure}[H]
+		\begin{subfigure}[t]{0.495\textwidth}
+			\includegraphics[width=\textwidth]{#2}
+			\caption{#3}\label{#4}
+		\end{subfigure}	
+		\hfill
+		\begin{subfigure}[t]{0.495\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{#5}
+			\caption{#6}\label{#7}
+		\end{subfigure}
+		
+		%\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
+		\raisebox{-20pt}{\parbox[t]{\textwidth}{
+				\textit{#8\\}
+				\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
+		}}
+		
+		\caption{#9}
+		\label{#1}
+	\end{figure}
+}
+
+%used for multiple images in one box
+\newcommand{\baseboxdesc}[4]{
+	\begin{figure}[H]
+		\centering
+		#1
+		
+		\raisebox{-7pt}{\parbox[t]{\textwidth}{
+				\textit{#4\\}
+				\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
+		}}
+		
+		\caption{#3}
+		\label{#2}
+	\end{figure}
+}

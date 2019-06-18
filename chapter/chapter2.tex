@@ -2,16 +2,26 @@
 
 \section{Code}
 
-Reference to Listing \ref{regarrays_gen}.
+Reference to \refn[l]{list:regarrays}. The command \code{\\refn} additionally adds a localized typename in front of the number. The localization has to be set inside \code{styling.tex}.
 
-\label{regarrays}
-\lstset{style=verilog-style}
-\lstinputlisting[caption=Beispiel einer Portliste mit Register-/Wirearrays]{inc/code/addierzelle_entity_regarray.v}
+\codebox{verilog}{inc/code/addierzelle_entity_regarray.v}{list:regarrays}{Example of a portlist with register- / wirearrays}
 
+\codeboxdesc[17]{verilog}{inc/code/addierzelle_entity_generic.v}{list:regarrays_gen}{Example of a generic portlist with register- / wirearrays}{This is a codebox with an explicit defined description area. Text only referencing the code can be placed in here. Additionally referencing single lines works like \refnum{line:C_IN} this or like this \refnum{line:referencing}!}
 
-\label{regarrays_gen}
-\lstset{style=verilog-style}
-\lstinputlisting[caption=Beispiel einer Portliste mit Register-/Wirearrays,firstnumber=17]{inc/code/addierzelle_entity_generic.v}
+Additionally next to \code{inline highlighting} there are textboxes too:
+
+\highlightbox{0.93}{
+	\inlinetext{mex -lde265 decoder/interface.cpp decoder/decoder.cpp -outdir decoder/bin;}
+}
+
+\section{Images}
+
+Image boxes can be created in the same style as codeboxes. There are predefined image box styles for single and double images and a generic box for the use with multiple elements.
+
+\imgboxdesc[1]{inc/img/img1.png}{fig:img1}{A single image}{This is a single image that uses the full width of the page. It can have a command in the same style as the codebox uses.}
+
+\doubleimgboxdesc{fig:double}{inc/img/img1.png}{Image 1}{fig:double1}{inc/img/img2.png}{Image 2}{fig:double2}{Two images can be displayed next to each other if they have the same dimensions.}{Two images next to eachother}
+
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 % From this point on, only show up to \sections in the ToC
