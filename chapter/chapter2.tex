@@ -1,6 +1,6 @@
 % !TeX root = ../mainfile.tex
 
-\section{Code}
+\chapter{Code Boxes}
 
 Reference to \refn[l]{list:regarrays}. The command \code{\\refn} additionally adds a localized typename in front of the number. The localization has to be set inside \code{styling.tex}.
 
@@ -14,7 +14,7 @@ Additionally next to \code{inline highlighting} there are textboxes too:
 	\inlinetext{mex -lde265 decoder/interface.cpp decoder/decoder.cpp -outdir decoder/bin;}
 }
 
-\section{Images}
+\chapter{Images Boxes}
 
 Image boxes can be created in the same style as codeboxes. There are predefined image box styles for single and double images and a generic box for the use with multiple elements.
 
@@ -23,16 +23,19 @@ Image boxes can be created in the same style as codeboxes. There are predefined 
 \doubleimgboxdesc{fig:double}{inc/img/img1.png}{Image 1}{fig:double1}{inc/img/img2.png}{Image 2}{fig:double2}{Two images can be displayed next to each other if they have the same dimensions.}{Two images next to eachother}
 
 
+
+
+\newpage
+\chapter{Titles may be hidden!}
+In this chapter some titles may be hidden and therefore are not shown in the TOC.
+
 \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 % From this point on, only show up to \sections in the ToC
+\section{Not Hidden Section}
+I'm not hidden in the ToC! \cite{Albrecht2010}
 
-\pagebreak
-
-\subsection{Hidden subsection}
-I'm hidden in the ToC! \cite{Albrecht2010}
-
-\subsection*{Hidden subsection without a number}
-I'm hidden too! \cite{Albrecht2010_IEICE}
+\section*{Hidden subsection without a number}
+I'm hidden! \cite{Albrecht2010_IEICE}
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{5}}
 % From this point on, show everything again
