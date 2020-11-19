@@ -1,6 +1,15 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = de_DE_frami
 
+% DEFINE NAMES FOR FILEHEADER
+
+\newcommand{\coursename}{ASIM 3}
+\newcommand{\term}{Summer Semester 2020/21}
+\newcommand{\university}{Saarland University}
+\newcommand{\professor}{Prof.\ Dr.\ Gianluca Rizello}
+\newcommand{\assistant}{Tim Goll}
+\newcommand{\assigment}{Assignment 01}
+
 \input{inc/header.tex}
 \input{inc/syntax_highlight.tex}
 \input{inc/colors.tex}
@@ -8,20 +17,8 @@
 
 \begin{document}
 
-% TITLE PAGE
-\input{chapter/title.tex}
-
-% TABLE OF CONTENTS
-\tableofcontents
-\pagebreak
-
 % INCLUDE CHAPTER
-\input{chapter/chapter1.tex} \pagebreak
-\input{chapter/chapter2.tex} \pagebreak
-
-% BIBTEX
-\renewcommand{\bibname}{Literatur- und Quellenverzeichnis} 
-\bibliographystyle{unsrt}
-\bibliography{bibtex}
+\input{content/general.tex}
+\input{content/task1.tex}
 
 \end{document}

@@ -3,23 +3,35 @@
 % SETUP HEADER AND FOOTER
 \pagestyle{scrheadings}
 \clearpairofpagestyles{}
-\ihead[]{\headmark}
+
+\ihead[]{\begin{tabular}{cl}
+	\multirow{3}{*}{\includegraphics[scale=0.48]{inc/img/uds_logo.png}} & \coursename{} \\
+	& \term{} \\
+	& \university{}
+\end{tabular}}
+
+\ohead[]{\begin{tabular}{rc}
+	\professor{} & \multirow{3}{*}{\includegraphics[scale=0.165]{inc/img/imsl_logo.pdf}} \\
+	\assistant{} \\
+	\assigment{}
+\end{tabular}}
+
 \automark[subsection]{section}
 \ofoot[\pagemark]{\pagemark}
 
 \addtokomafont{headsepline}{\color{scr-gray}}
 \addtokomafont{footsepline}{\color{scr-gray}}
-\setkomafont{pageheadfoot}{\color{scr-gray-2} \bfseries \small} 
+\setkomafont{pageheadfoot}{\color{scr-gray-2} \small}
 
 % SETUP URL/CITE
 \hypersetup{colorlinks,linkcolor={black},citecolor={citecolor},urlcolor={urlcolor}}
 
 % SETUP CAPTIONS
 % german titles
-\newcommand{\ngfigure}{Abbildung}
-\newcommand{\ngtable}{Tabelle}
-\newcommand{\nglisting}{Codeauszug}
-\newcommand{\ngsection}{Kapitel}
+\newcommand{\ngfigure}{Figure}
+\newcommand{\ngtable}{Table}
+\newcommand{\nglisting}{Listing}
+\newcommand{\ngsection}{Chapter}
 \addto\captionsngerman{\renewcommand{\figurename}{\ngfigure}}
 \addto\captionsngerman{\renewcommand{\tablename}{\ngtable}}
 \addto\captionsngerman{\renewcommand{\lstlistingname}{\nglisting}}
