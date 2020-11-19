@@ -2,7 +2,7 @@
 
 % SETUP HEADER AND FOOTER
 \pagestyle{scrheadings}
-\clearscrheadfoot
+\clearpairofpagestyles{}
 \ihead[]{\headmark}
 \automark[subsection]{section}
 \ofoot[\pagemark]{\pagemark}
@@ -49,11 +49,11 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=#1\textwidth]{#2}
-		
+
 		\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
-		
-		\caption{#4}
-		\label{#3}
+
+		\caption{#4}%
+		\label{#3}%
 	\end{figure}
 }
 
@@ -61,15 +61,15 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=#1\textwidth]{#2}
-		
+
 		%\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
 		\raisebox{-7pt}{\parbox[t]{\textwidth}{
 				\textit{#5\\}
 				\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
 		}}
 
-		\caption{#4}
-		\label{#3}
+		\caption{#4}%
+		\label{#3}%
 	\end{figure}
 }
 
@@ -78,22 +78,22 @@
 		\begin{subfigure}[t]{0.495\textwidth}
 			\includegraphics[width=\textwidth]{#2}
 			\caption{#3}\label{#4}
-		\end{subfigure}	
+		\end{subfigure}
 		\hfill
 		\begin{subfigure}[t]{0.495\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{#5}
 			\caption{#6}\label{#7}
 		\end{subfigure}
-		
+
 		%\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
 		\raisebox{-20pt}{\parbox[t]{\textwidth}{
 				\textit{#8\\}
 				\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
 		}}
-		
-		\caption{#9}
-		\label{#1}
+
+		\caption{#9}%
+		\label{#1}%
 	\end{figure}
 }
 
@@ -102,13 +102,13 @@
 	\begin{figure}[H]
 		\centering
 		#1
-		
+
 		\raisebox{-7pt}{\parbox[t]{\textwidth}{
 				\textit{#4\\}
 				\textcolor{bordercolor}{\rule{\textwidth}{0.5px}}
 		}}
-		
-		\caption{#3}
-		\label{#2}
+
+		\caption{#3}%
+		\label{#2}%
 	\end{figure}
 }

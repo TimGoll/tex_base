@@ -7,5 +7,7 @@
 *.toc
 *.lof
 *.soc
+*.fls
+*.fdb_latexmk
 
 **.DS_STORE

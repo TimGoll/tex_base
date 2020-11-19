@@ -1,6 +1,7 @@
 % !TeX root = ../mainfile.tex
 
 \chapter{Basics}
+
 Text can be \textbf{bold}, \textit{italic}, \underline{underlined} or \textbf{\textit{\underline{everything together}}}. \texttt{Inline code is possible too}. Another sentence.
 
 Text indents automatically if you leaves one row empty. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. \cite{Albrecht2010}
@@ -8,6 +9,7 @@ Text indents automatically if you leaves one row empty. Lorem ipsum dolor sit am
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. \cite{hdl_routing} \cite{light_leakage_color}
 
 \section{Item list}
+
 \begin{itemize}
 	\item item 1
 	\subitem subitem 1
@@ -16,47 +18,57 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 \end{itemize}
 
 \section{Numbered List}
+
 \begin{enumerate}
 	\item numbered item 1
 	\item numbered item 2
 \end{enumerate}
 
 \section{Table}
+
 \begin{table}[H] %[] can be h (here), H (force here), ...
 	\begin{center}
-		\begin{tabular}{c|cc}
+		\begin{tabular}{ccc}
 			& Item 1 & Item 2 \\
-			\hline
+			\toprule
 			1 & c & d \\
 			2 & e & f
 		\end{tabular}
-		\caption{Title.......}
+		\caption{Your title here}
 		\label{tab:8bitnumber}
 	\end{center}
 \end{table}
 
 \section{Math}
+
 Inline Math looks like this $x = y + z$.
+
 \begin{align}
 	x &= y + z \\
 	v + b &= 4
 \end{align}
 
 \begin{align*}
-x &= y + z \\
-v + b &= 4
+	x &= y + z \\
+	v + b &= 4
 \end{align*}
 
 \newpage
+
 \chapter{Layer 0}
 asdf
+
 \section{Layer 1}
 asdf
+
 \subsection{Layer 2}
 asdf
+
 \subsubsection{Layer 3}
 asdf
+
 \paragraph{Layer 4}
 asdf
+
 \subparagraph{Layer 5}
 asdf
