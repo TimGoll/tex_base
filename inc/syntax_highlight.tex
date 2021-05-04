@@ -5,19 +5,19 @@
 % MATLAB style
 \lstdefinestyle{matlab} {
 	escapeinside={/*@}{@*/},
-	language=matlab, 
-	morekeywords={classdef, properties, methods},
-	deletekeywords={gamma, type},
-	basicstyle=\ttfamily \small  \color{inlineBoxListingText},
+	language=matlab,
+	morekeywords={classdef, properties, methods, syms},
+	deletekeywords={gamma, type, title},
+	basicstyle=\ttfamily \small \color{inlineBoxListingText},
 	identifierstyle=\ttfamily \small \color{black},
 	keywordstyle=\bfseries \color{keywordcolor},
 	commentstyle=\itshape \color{commentcolor},
 	stringstyle=\ttfamily \color{stringcolor},
 	showstringspaces=false,
 	frame=none,
-	breaklines=true, 
+	breaklines=true,
 	numbers=left,
-	numberstyle={\llabelput \scriptsize \ttfamily \color{numbercolor}}, 
+	numberstyle={\llabelput \scriptsize \ttfamily \color{numbercolor}},
 	numbersep=7.5pt,
 	frame=lines,
 	rulecolor=\color{bordercolor},
@@ -37,14 +37,14 @@
 	stringstyle=\ttfamily \color{stringcolor},
 	showstringspaces=false,
 	frame=none,
-	breaklines=true, 
+	breaklines=true,
 	numbers=left,
 	numberstyle={\llabelput \scriptsize \ttfamily \color{numbercolor}},
 	numbersep=7.5pt,
 	frame=lines,
 	rulecolor=\color{bordercolor},
 	backgroundcolor=\color{backgroundcolor},
-	captionpos=b,    
+	captionpos=b,
 	tabsize=4
 }
 
@@ -59,14 +59,14 @@
 	stringstyle=\ttfamily \color{stringcolor},
 	showstringspaces=false,
 	frame=none,
-	breaklines=true, 
+	breaklines=true,
 	numbers=left,
 	numberstyle={\llabelput \scriptsize \ttfamily \color{numbercolor}},
 	numbersep=7.5pt,
 	frame=lines,
 	rulecolor=\color{bordercolor},
 	backgroundcolor=\color{backgroundcolor},
-	captionpos=b,    
+	captionpos=b,
 	tabsize=4
 }
 
@@ -77,17 +77,17 @@
 	% Counter `lstlisting' is not defined before `\begin{document}'
 	\newcounter{llabel}[lstlisting]%
 	\renewcommand*{\thellabel}{%
-		\ifnum\value{llabel}<0 %  
-		\@ctrerr
+		\ifnum\value{llabel}<0 %
+			\@ctrerr
 		\else
-		\ifnum\value{llabel}>10 %
-		\@ctrerr
-		\else
-		\protect\ding{\the\numexpr\value{llabel}+181\relax}%
+			\ifnum\value{llabel}>10 %
+				\@ctrerr
+			\else
+				\protect\ding{\the\numexpr\value{llabel}+181\relax}%
+			\fi
 		\fi
-		\fi  
-	}%   
-}   
+	}%
+}
 \newlength{\llabelsep}
 
 \newcommand*{\llabel@name}{%
@@ -113,7 +113,7 @@
 		\fi
 		\kern\llabelsep\scriptsize
 	}%
-}   
+}
 \makeatother
 
 \newcommand{\refnum}[1]{\raisebox{-2pt}{\Large\ref{#1}}}

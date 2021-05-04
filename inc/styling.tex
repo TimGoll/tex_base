@@ -3,9 +3,12 @@
 % SETUP HEADER AND FOOTER
 \pagestyle{scrheadings}
 \clearpairofpagestyles{}
+
 \ihead[]{\headmark}
-\automark[subsection]{section}
+
 \ofoot[\pagemark]{\pagemark}
+
+\automark[subsection]{section}
 
 \addtokomafont{headsepline}{\color{scr-gray}}
 \addtokomafont{footsepline}{\color{scr-gray}}
@@ -111,4 +114,11 @@
 		\caption{#3}%
 		\label{#2}%
 	\end{figure}
+}
+
+%inline graphics
+\newcommand{\inlinegraphic}[1]{%
+	\begingroup\normalfont
+	\raisebox{-3pt}{\includegraphics[height=1.8\fontcharht\font`\B]{#1}}%
+	\endgroup
 }
